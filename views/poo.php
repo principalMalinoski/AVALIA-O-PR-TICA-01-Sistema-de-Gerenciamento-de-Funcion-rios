@@ -40,19 +40,16 @@
         public function email(){
             echo "Seu email";
         }
-        function calcularBonus(){
-            if ($salario = 2500) {
-                echo "salário Certo";
-            } else { 
-               echo "Adicionar 5%";
-            }
-        }
+        function calcularBonus($salario, $bonusFuncionarioComum) {
+            return $salario + $bonusFuncionarioComum;
+         } echo somar (2500, 125); 
+        
     }
 
     $FuncionarioComum->nome = "Otavio";
-    $Funcionario->salario = 2500;
-    $Funcionario->email = "otavio@gmail.com";
-
+    $FuncionarioComum->salario = 2500;
+    $FuncionarioComum->email = "otavio@gmail.com";
+    $bonusFuncionarioComum->acrescimo = 125;
 
      class Gerente {
         public $nome;
@@ -70,14 +67,11 @@
         public function email(){
             echo "Seu email";
         }
-        function calcularBonus(){
-            if ($salario = 7000) {
-                echo "salário Certo";
-            } else { 
-               echo "Adicionar 15%";
-            }
-        }
+           function calcularBonus($salario, $bonusGerente) {
+            return $salario + $bonusGerente;
+         } echo somar (7000, 350); 
     }
-    $FuncionarioComum->nome = "Nicolas";
-    $Funcionario->salario = 7000;
-    $Funcionario->email = "nicolas@gmail.com";
+    $Gerente->nome = "Nicolas";
+    $Gerente->salario = 7000;
+    $Gerente->email = "nicolas@gmail.com";
+    $bonusGerente->acrescimo = 350;

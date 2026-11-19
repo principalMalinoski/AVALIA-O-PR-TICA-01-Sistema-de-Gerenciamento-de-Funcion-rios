@@ -16,7 +16,7 @@ $stmt-> execute([
     ":idade" => 17,
     ":email" => "gustavo@gmail.com",
     ":salario" => "2500",
-    ":tipo" => "funcional",
+    ":funcao" => "organizador",
 ]);
 
 //Consultar
@@ -39,3 +39,12 @@ $stmt-> execute([
     ":nome" => "Gustavo",
     ":id" => "1",
 ]);
+
+//Excluir
+
+$sql = "DELETE FROM Funcionarios where id= :id";
+
+$stmt = $pdo-> prepare($sql);
+$stmt-> execute([":id => 1"]);
+
+?>
