@@ -36,7 +36,7 @@ $sql = "UPDATE Funcionarios SET nome =:nome WHERE id= :id";
 
 $stmt= $pdo-> prepare($sql);
 $stmt-> execute([
-    ":nome" => "Gustavo",
+    ":nome" => "Otavio",
     ":id" => "1",
 ]);
 
